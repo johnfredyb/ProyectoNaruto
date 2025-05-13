@@ -1,4 +1,3 @@
-// Obtener el parámetro 'id' de la URL
 let urlParams = new URLSearchParams(window.location.search);
 let id = parseInt(urlParams.get('id'));
 

@@ -35,7 +35,7 @@ function mostrarPagina(pagina) {
         aldea.textContent = personaje.aldea;
 
         contenedorPersonaje.addEventListener('click', () => {
-            window.location.href = `jesussuarez-personaje.html?id=${personaje.id}`; // Redirige a la página deseada
+            window.location.href = `jesussuarez-personaje.html?id=${personaje.id}`;
         });
         contenedorPersonaje.appendChild(imagenPersonaje);
         contenedorPersonaje.appendChild(nombre);
