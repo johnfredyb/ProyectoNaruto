@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles del Personaje - Naruto</title>
+
+    <link rel="stylesheet" href="../css/css.css" />
+ 
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="../html/frank.html" class="back-link">← Volver al galeria</a>
+    </nav>
+    <h1>Detalles del Personaje</h1>
+  </header>
+
+  <main>
+    <div id="loader" class="loader">Cargando detalles...</div>
+    <div id="character-details" style="display: none;">
+      <h2 id="modal-name"></h2>
+      <img id="modal-image" class="detail-image" src="" alt="Imagen del personaje" />
+      <div class="info-grid">
+        <p><strong>Aldea:</strong> <span id="modal-aldea"></span></p>
+        <p><strong>Rango:</strong> <span id="modal-rango"></span></p>
+        <p><strong>ID:</strong> <span id="modal-id"></span></p>
+        <p><strong>Jutsus:</strong> <span id="modal-jutsus"></span></p>
+      </div>
+      <p><a id="modal-url" href="#" target="_blank" style="color: #2d48e6;">Ver más en sitio oficial</a></p>
+    </div>
+    <p id="error-message" style="color: red; text-align: center; display: none;"></p>
+  </main>
+
+  <footer>
+    <img src="../img/Logo-nuevo-horizontal.png" alt="Logo 1" class="logo-footer">
+    <p>Laboratorio Programacion - Proyecto Naruto</p>
+    <img src="../img/logo_ingsistemas_vertical_invertido.png" alt="Logo 2" class="logo-footer">
+  </footer>
+
+  <script>
+    // Extraer ID desde la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const characterId = parseInt(urlParams.get("id"));
+
+    const loader = document.getElementById("loader");
+    const detailsContainer = document.getElementById("character-details");
+    const errorMessage = document.getElementById("error-message");
+
+    if (!characterId) {
+      loader.style.display = "none";
+      errorMessage.textContent = "ID de personaje no válido.";
+      errorMessage.style.display = "block";
+      exit;
+    }
+
+    // Cargar JSON remoto
+    fetch("https://johnfredyb.github.io/jsonNaruto.io/Json/jsonNaruto.json ")
+      .then(res => res.json())
+      .then(data => {
+        const character = data.personajes.find(c => c.id === characterId);
+
+        if (!character) {
+          loader.style.display = "none";
+          errorMessage.textContent = "Personaje no encontrado.";
+          errorMessage.style.display = "block";
+          return;
+        }
+
+        document.getElementById("modal-name").textContent = character.nombre || "Desconocido";
+        document.getElementById("modal-aldea").textContent = character.aldea || "Desconocida";
+        document.getElementById("modal-rango").textContent = character.rango || "Sin rango";
+        document.getElementById("modal-id").textContent = character.id;
+        document.getElementById("modal-jutsus").textContent = character.jutsus.join(", ") || "Ningún jutsu conocido";
+        document.getElementById("modal-url").href = character.url?.trim() || "#";
+
+        const imageElement = document.getElementById("modal-image");
+        imageElement.src = character.imagen?.trim() || `https://placehold.co/600x800?text= ${encodeURIComponent(character.nombre || "Personaje")}`;
+        imageElement.onerror = () => {
+          imageElement.src = "https://placehold.co/600x800?text=Sin+Imagen ";
+        };
+
+        loader.style.display = "none";
+        detailsContainer.style.display = "block";
+      })
+      .catch(err => {
+        console.error("Error al cargar los datos:", err);
+        loader.style.display = "none";
+        errorMessage.textContent = "Hubo un problema al cargar los detalles.";
+        errorMessage.style.display = "block";
+      });
+  </script>
+</body>
+</html>
