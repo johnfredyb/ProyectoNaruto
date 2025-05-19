@@ -1,0 +1,200 @@
+{
+  "personajes": [
+    {
+      "id": 1,
+      "nombre": "Naruto Uzumaki",
+      "aldea": "Konoha",
+      "rango": "Hokage",
+      "jutsus": [
+        "Kage Bunshin no Jutsu",
+        "Rasengan",
+        "Fūton: Rasenshuriken"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/naruto.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 2,
+      "nombre": "Sasuke Uchiha",
+      "aldea": "Antigua Aldea de la Hoja",
+      "rango": "Ninja renegado",
+      "jutsus": [
+        "Chidori",
+        "Sharingan",
+        "Susanoo"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/sasuke.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 3,
+      "nombre": "Sakura Haruno",
+      "aldea": "Konoha",
+      "rango": "Kunoichi",
+      "jutsus": [
+        "Shannaro",
+        "Cherry Blossom Impact",
+        "Byakugou no Jutsu"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/sakura.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 4,
+      "nombre": "Kakashi Hatake",
+      "aldea": "Konoha",
+      "rango": "Hokage",
+      "jutsus": [
+        "Chidori",
+        "Raikiri",
+        "Kamui"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/kakashi.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 5,
+      "nombre": "Shikamaru Nara",
+      "aldea": "Konoha",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Kagemane no Jutsu",
+        "Kage Nui",
+        "Kageyose no Jutsu"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/shikamaro.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 6,
+      "nombre": "Rock Lee",
+      "aldea": "Konoha",
+      "rango": "Genin",
+      "jutsus": [
+        "Konoha Senpuu",
+        "Omote Renge",
+        "Kai"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/lee.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 7,
+      "nombre": "Neji Hyuga",
+      "aldea": "Konoha",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Byakugan",
+        "Kaiten",
+        "Hakke Rokujuuyon Shou"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/neji.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 8,
+      "nombre": "Gaara",
+      "aldea": "Sunagakure",
+      "rango": "Kazekage",
+      "jutsus": [
+        "Sabaku Kyuu",
+        "Sabaku Sousou",
+        "Fūton: Mugen Sajin Daitoppa"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/gaara.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 9,
+      "nombre": "Temari",
+      "aldea": "Sunagakure",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Kuchiyose: Kirikiri Mai",
+        "Fuuton: Atsugai",
+        "Kamaitachi no Jutsu"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/temari.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 10,
+      "nombre": "Kankuro",
+      "aldea": "Sunagakure",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Karasu",
+        "Kuroari",
+        "Sanshouo"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/kankuro.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 11,
+      "nombre": "Hinata Hyuga",
+      "aldea": "Konoha",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Byakugan",
+        "Hakke Rokujyuu Yonshou",
+        "Jyuukenhou"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/hinata.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 12,
+      "nombre": "Ino Yamanaka",
+      "aldea": "Konoha",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Shintenshin no Jutsu",
+        "Kawarimi no Jutsu",
+        "Baika no Jutsu"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/ino.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 13,
+      "nombre": "Tenten",
+      "aldea": "Konoha",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Bunshin Daibakuha",
+        "Soshuriken no Jutsu",
+        "Bashosen: Coil of Wind"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/tenten.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 14,
+      "nombre": "Shino Aburame",
+      "aldea": "Konoha",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Kikaichu no Jutsu",
+        "Mushi Bunshin",
+        "Mushi Kabe no Jutsu"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/shino.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    },
+    {
+      "id": 15,
+      "nombre": "Choji Akimichi",
+      "aldea": "Konoha",
+      "rango": "Jōnin",
+      "jutsus": [
+        "Baika no Jutsu",
+        "Spiky Human Boulder",
+        "Super Multi-Size Technique"
+      ],
+      "imagen": "https://johnfredyb.github.io/jsonNaruto.io/img/choji.jpg",
+      "url": "https://naruto-official.com/es/about/story"
+    }
+  ]
+}
+
