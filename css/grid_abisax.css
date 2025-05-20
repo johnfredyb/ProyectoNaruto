@@ -1,0 +1,215 @@
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+    --card: #f4f4f4;
+  }
+  
+  body.oscuro {
+    --bg: #121212;
+    --text: #f5f5f5;
+    --card: #1e1e1e;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  header {
+    background-color: #ff6600;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+  }
+  
+  #toggle-tema {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .busqueda-container {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .busqueda-container input,
+  .busqueda-container select,
+  .busqueda-container button {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .busqueda-container button {
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .busqueda-container button:hover {
+    background-color: #e55300;
+  }
+  
+  .estadisticas {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  .grid-personajes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .tarjeta {
+    background-color: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .tarjeta:hover {
+    transform: scale(1.03);
+  }
+  
+  .tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .tarjeta .info {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .tarjeta .info p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: var(--text);
+  }
+  
+  .favorito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: gold;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .paginacion {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .paginacion button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #003893;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .paginacion button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+  .btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #003893;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+  
+
+  footer {
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    animation: aparecer 0.3s ease;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+
+  @keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
