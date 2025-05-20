@@ -2,7 +2,7 @@ const character = document.getElementById("characters");
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-const url = "https://johnfredyb.github.io/jsonNaruto.io/Json/jsonNaruto.json";
+const url = "https://johnfredyb.github.io/jsonNaruto.io/Json/jsonNaruto2.json";
 
 async function cargarPersonajes() {
   try {

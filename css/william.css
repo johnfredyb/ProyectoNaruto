@@ -104,6 +104,13 @@ h1 {
     align-items: center;
 }
 
+img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 .character-details {
     display: flex;
     flex-direction: column;
