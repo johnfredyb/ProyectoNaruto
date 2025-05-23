@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/william.css">
+    <title>Detalle personaje</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../">Inicio</a></li>
+                <li><a href="javascript:history.back()">Atras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-detail">
+        <div class="character-details" id="character-details">
+
+        </div>
+    </main>
+
+    <footer>
+        <img src="../img/Logo-nuevo-horizontal.png" alt="Logo 1" class="logo-footer">
+        <p>Laboratorio Programacion - Proyecto Naruto</p>
+        <img src="../img/logo_ingsistemas_vertical_invertido.png" alt="Logo 2" class="logo-footer">
+    </footer>
+</body>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const characterId = params.get('id');
+
+    const url = "https://johnfredyb.github.io/jsonNaruto.io/Json/jsonNaruto2.json";
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const character = data.personajes.find(item => item.id == characterId);
+
+        if (character) {
+          const detailsDiv = document.getElementById("character-details");
+          detailsDiv.innerHTML = `
+            <h1>${character.nombre}</h1>
+            <img src="${character.imagen}" alt="${character.nombre}">
+            <p>Aldea: ${character.aldea}</p>
+            <p>Rango: ${character.rango}</p>
+            <h3>Jutsus</h3>
+            <ul>
+              ${character.jutsus.map(jutsu => `<li>${jutsu}</li>`).join('')}   
+            </ul>
+            <a href="${character.url}">Ver más</a>
+          `;
+        } else {
+          document.getElementById("character-details").innerHTML = "<p>Personaje no encontrado.</p>";
+        }
+      })
+</script>
+</html>
