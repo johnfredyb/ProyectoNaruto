@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    background-image: url(../img/bg.png);
+    background-size: cover;
+}
+
+nav {
+    height: 2.1vw;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul a {
+    font-family: Tahoma, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+nav ul a:hover {
+    color: #ff8c00;
+}
+
+.title {
+    margin: 4vw;
+    text-align: center;
+
+}
+
+.title img {
+
+    opacity: 0;
+    width: 17vw;
+    animation: fadeIn 2s ease forwards;
+    margin-bottom: 1vw;
+}
+
+.title p {
+    font-family: 'Ninja Naruto', sans-serif;
+    color: white;
+    -webkit-text-stroke: 0.07vw black;
+    font-size: 1.17vw;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 1s;
+}
+
+.personajes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 7vw;
+    margin-left: 14vw;
+    margin-right: 14vw;
+
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 2s;
+}
+
+.personaje {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    font-family: Tahoma, sans-serif;
+    font-size: 21px;
+    border-radius: 7%;
+    transition: all 1s ease;
+
+}
+
+.personaje:hover {
+    background-color: rgba(255, 140, 0, 0.77);
+    font-size: 21px;
+    -webkit-text-stroke: 0.07vw black;
+    font-family: 'Ninja Naruto', sans-serif;
+
+    cursor: url(../img/cursor.png), pointer;
+}
+
+.personaje img {
+    margin-top: 3vw;
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 7%;
+}
+
+.personaje iframe {
+    margin-top: 3vw;
+    width: 10vw;
+    border-radius: 7%;
+    border: none;
+    overflow: hidden;
+}
+
+.personaje .aldea {
+
+    margin-bottom: 3vw;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    margin: 5vw;
+}
+
+.paginacion button {
+    all: unset;
+    cursor: pointer;
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    width: 2.7vw;
+    height: 2.7vw;
+    margin: 1vw;
+    background-color: #ff8c00;
+    border-radius: 17%;
+    transition: all 1s ease;
+    font-size: 21px;
+    color: white;
+}
+
+.paginacion button:hover {
+    background-color: white;
+    font-family: 'Ninja Naruto', sans-serif;
+    color: #ff8c00;
+    cursor: url(../img/cursor.png), pointer;
+}
+
+footer {
+    margin-top: 1vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    color: white;
+    font-family: Tahoma, sans-serif;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer p {
+    margin-right: 70vw;
+
+}
+
+
+footer img {
+    height: 2.1vw;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'Ninja Naruto';
+    src: url('../fonts/njnaruto.ttf') format('truetype');
+}
