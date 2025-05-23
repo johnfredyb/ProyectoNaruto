@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería Abisaid - 1151710</title>
+  <link rel="stylesheet" href="/CSS/grid_abisax.css" />
+</head>
+<body>
+  <header>
+    <h1>Galería Abisaid - 1151710</h1>
+    <button id="toggle-tema">🌙 Modo Oscuro</button>
+  </header>
+
+  <div class="busqueda-container">
+    <input type="text" id="busqueda" placeholder="Buscar por nombre..." />
+
+    <select id="filtroAldea">
+      <option value="">Todas las aldeas</option>
+    </select>
+
+    <select id="filtroRango">
+      <option value="">Todos los rangos</option>
+    </select>
+
+    <button id="verFavoritos">⭐ Ver Favoritos</button>
+    <button id="exportarJson">⬇️ Exportar JSON</button>
+    <button id="exportarCsv">⬇️ Exportar CSV</button>
+  </div>
+
+  <section id="estadisticas" class="estadisticas"></section>
+
+  <main>
+    <div id="galeria-grid" class="grid-personajes"></div>
+
+    <div class="paginacion">
+      <button id="prevPage">⟨ Anterior</button>
+      <span id="numPagina">Página 1</span>
+      <button id="nextPage">Siguiente ⟩</button>
+    </div>
+  </main>
+
+  <a href="/index.html" class="btn">Volver</a>
+
+  <footer>
+    <p>Proyecto Abisaid - UFPS</p>
+  </footer>
+
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="cerrarModal" class="close">&times;</span>
+      <img id="modalImg" alt="Imagen personaje" />
+      <h2 id="modalNombre"></h2>
+      <p id="modalAldea"></p>
+      <p id="modalRango"></p>
+    </div>
+  </div>
+
+  <script src="/JS/grid_abisax.js"></script>
+</body>
+</html>
